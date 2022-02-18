@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="1" name="org.features.search.SearchByKeywordStory" skipped="0" tests="1" time="6.19" timestamp="2022-02-16 10:48:42"><testcase classname="org.features.search.SearchByKeywordStory" name="Searching by keyword banana should display the corresponding article"><failure message="&#13;&#10;Expected: a collection containing a string containing &quot;An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem.&quot;&#13;&#10;     but: mismatches were: [was &quot;An edible fruit produced by the pear tree, similar to an apple but typically elongated towards the stem.&quot;, was &quot;A type of fruit tree (Pyrus communis).&#10;Synonym: pear tree&quot;, was &quot;The wood of the pear tree (pearwood, pear wood).&quot;, was &quot;Choke pear (a torture device).&quot;, was &quot;(Jamaican) avocado, alligator pear&quot;, was &quot;A desaturated chartreuse yellow colour, like that of a pear.&#10;pear:  &quot;]" type="java.lang.AssertionError">&#13;
+Expected: a collection containing a string containing "An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem."&#13;
+     but: mismatches were: [was "An edible fruit produced by the pear tree, similar to an apple but typically elongated towards the stem.", was "A type of fruit tree (Pyrus communis).
+Synonym: pear tree", was "The wood of the pear tree (pearwood, pear wood).", was "Choke pear (a torture device).", was "(Jamaican) avocado, alligator pear", was "A desaturated chartreuse yellow colour, like that of a pear.
+pear:  "]</failure><system-err>&#13;
+Expected: a collection containing a string containing "An edible fruit produced by the pear tree, similar to an apple but elongated towards the stem."&#13;
+     but: mismatches were: [was "An edible fruit produced by the pear tree, similar to an apple but typically elongated towards the stem.", was "A type of fruit tree (Pyrus communis).
+Synonym: pear tree", was "The wood of the pear tree (pearwood, pear wood).", was "Choke pear (a torture device).", was "(Jamaican) avocado, alligator pear", was "A desaturated chartreuse yellow colour, like that of a pear.
+pear:  "]&#13;
+org.steps.serenity.EndUserSteps.should_see_definition(EndUserSteps.java:27)&#13;
+org.features.search.SearchByKeywordStory.searching_by_keyword_banana_should_display_the_corresponding_article(SearchByKeywordStory.java:37)&#13;
+</system-err></testcase></testsuite>
