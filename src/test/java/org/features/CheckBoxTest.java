@@ -11,4 +11,12 @@ public class CheckBoxTest extends BaseTest{
     checkBoxSteps.goToCheckBox();
     checkBoxSteps.isCheckBoxPageDisplayed();
 }
+
+@Test
+    public void verifyExpandAndCollapseAllButtons(){
+    checkBoxSteps.navigateToHomePage();
+    checkBoxSteps.navigateToElementsPage();
+    checkBoxSteps.goToCheckBox();
+    checkBoxSteps.verifyExpandAndCollapseButtons();
+}
 }

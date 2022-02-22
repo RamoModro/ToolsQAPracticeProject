@@ -20,6 +20,9 @@ public class CheckBoxPage extends BasePage{
     @FindBy(className = "rct-option-collapse-all")
     private WebElementFacade collapseAllButton;
 
+    @FindBy(css = "#tree-node-downloads")
+    private WebElementFacade downloadsButton;
+
 
     public boolean isUserInCheckBoxPage(){
         return pageTitle.containsText("Check Box");
@@ -39,5 +42,14 @@ public class CheckBoxPage extends BasePage{
 
     public void clickCollapseAllButton(){
         clickOn(collapseAllButton);
+    }
+
+    public boolean isMenuExpanded(){
+        return downloadsButton.isPresent();
+    }
+
+    public void isMenuCollapsed(){
+        downloadsButton.shouldNotBePresent();
+
     }
 }

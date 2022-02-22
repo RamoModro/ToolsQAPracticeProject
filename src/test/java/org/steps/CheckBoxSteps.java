@@ -15,4 +15,14 @@ public class CheckBoxSteps extends BaseSteps{
     public void isCheckBoxPageDisplayed(){
         Assert.assertTrue("User is not redirected to Check Box page",checkBoxPage.isUserInCheckBoxPage());
     }
+
+    @Step
+    public void verifyExpandAndCollapseButtons(){
+        checkBoxPage.clickExpandAllButton();
+        checkBoxPage.isMenuExpanded();
+        checkBoxPage.clickCollapseAllButton();
+        checkBoxPage.isMenuCollapsed();
+    }
 }
+
+

@@ -39,4 +39,6 @@ public class BaseTest {
     protected BrokenLinksSteps brokenLinksSteps;
     @Steps
     protected ButtonsSteps buttonsSteps;
+    @Steps
+    protected FormsSteps formSteps;
 }

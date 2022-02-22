@@ -14,11 +14,18 @@ public class HomePage extends PageObject {
     @FindBy(css = "header a")
     private WebElementFacade pageHeader;
 
+    @FindBy(css = ".top-card:nth-child(2)")
+    private WebElementFacade formsLink;
+
     public void clickElementsLink(){
         clickOn(elementsLink);
     }
 
     public void checkUserIsInHomePage(){
         pageHeader.isPresent();
+    }
+
+    public void clickFormsLink(){
+        clickOn(formsLink);
     }
 }

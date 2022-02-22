@@ -15,6 +15,7 @@ public class BaseSteps extends ScenarioSteps {
     public LinksPage linksPage;
     public BrokenLinksPage brokenLinksPage;
     public ButtonsPage buttonsPage;
+    public FormsPage formsPage;
 
     @Step
     public void navigateToHomePage(){
@@ -25,6 +26,12 @@ public class BaseSteps extends ScenarioSteps {
     public void navigateToElementsPage(){
         homePage.clickElementsLink();
         elementsPage.checkElementsPageIsDisplayed();
+    }
+
+    @Step
+    public void navigateToFormsPage(){
+        homePage.clickFormsLink();
+        formsPage.checkFormsPageIsDisplayed();
     }
 
 }
