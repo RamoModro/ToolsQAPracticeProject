@@ -16,6 +16,7 @@ public class BaseSteps extends ScenarioSteps {
     public BrokenLinksPage brokenLinksPage;
     public ButtonsPage buttonsPage;
     public FormsPage formsPage;
+    public AlertsFrameWindowsPage alertsFrameWindowsPage;
 
     @Step
     public void navigateToHomePage(){

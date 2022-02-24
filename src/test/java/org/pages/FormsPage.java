@@ -2,9 +2,7 @@ package org.pages;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
-import org.checkerframework.checker.units.qual.K;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.junit.Assert;
 
 import java.util.List;
 
@@ -61,9 +59,17 @@ public class FormsPage extends BasePage{
     @FindBy(css = "#close-fixedban")
     private WebElementFacade closeAddButton;
 
-    public boolean isUserInPracticeFormPage(){
-        return pageTitle.containsText("Practice Form");
+    @FindBy(css = "#react-select-3-input")
+    private WebElementFacade state_Dropdown;
+
+    @FindBy(css = ".form-file")
+    private WebElementFacade chooseFileButton;
+
+
+    public void isUserInPracticeFormPage(){
+        pageTitle.containsText("Practice Form");
     }
+
     public void clickPracticeFormButton(){
         clickOn(practiceFormButton);
     }
@@ -79,9 +85,8 @@ public class FormsPage extends BasePage{
         typeInto(lastNameField, lastName);
     }
 
-    public boolean checkSubmissionMsg(){
+    public void checkSubmissionMsg(){
         successfulSubmissionMsg.shouldContainOnlyText("Thanks for submitting the form");
-        return false;
     }
 
     public void setEmailField(String mail){
@@ -115,7 +120,6 @@ public class FormsPage extends BasePage{
 
     public boolean setDayOfBirth(int number){
         for (WebElementFacade element : dayOfBirthList) {
-            System.out.println(element.getText());
             if (element.getText().equals(number+"")) {
                 clickOn(element);
                 return true;
@@ -133,4 +137,22 @@ public class FormsPage extends BasePage{
         clickOn(closeSubmittedFormButton);
     }
 
-}
+    public void setState(String state){
+        typeInto(state_Dropdown, state);
+    }
+
+    public void clickChooseFileButton(){
+        clickOn(chooseFileButton);
+    }
+
+   // public void uploadPicture(){
+       // chooseFileButton.sendKeys("C:\\Users\\ramonamodrogan\\Desktop\\Capture.PNG");
+        //if(chooseFileButton.isDisplayed()) {
+           // Assert.assertTrue("Picture is Uploaded", true);
+       // }else {
+           // Assert.fail("Picture not Uploaded");
+       // }
+    }
+
+
+

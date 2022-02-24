@@ -40,4 +40,13 @@ public class FormsSteps extends BaseSteps {
         formsPage.closeSubmittedFormMsg();
     }
 
+    @Step
+    public void setState(String state){
+        formsPage.setState(state);
+    }
+
+    @Step
+    public void clickChooseFileButton(){
+        formsPage.clickChooseFileButton();
+    }
 }

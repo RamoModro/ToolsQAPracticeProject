@@ -41,4 +41,6 @@ public class BaseTest {
     protected ButtonsSteps buttonsSteps;
     @Steps
     protected FormsSteps formSteps;
+    @Steps
+    protected AlertsFrameWindowsSteps alertsFrameWindowsSteps;
 }

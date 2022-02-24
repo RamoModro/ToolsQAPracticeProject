@@ -6,7 +6,7 @@ import net.thucydides.core.annotations.DefaultUrl;
 import net.thucydides.core.pages.PageObject;
 
 @DefaultUrl("https://demoqa.com/")
-public class HomePage extends PageObject {
+public class HomePage extends BasePage {
 
     @FindBy(css = ".top-card:first-child")
     private WebElementFacade elementsLink;
@@ -17,6 +17,9 @@ public class HomePage extends PageObject {
     @FindBy(css = ".top-card:nth-child(2)")
     private WebElementFacade formsLink;
 
+    @FindBy(css = ".top-card:nth-child(3)")
+    private WebElementFacade alertsFrameWindowsLink;
+
     public void clickElementsLink(){
         clickOn(elementsLink);
     }
@@ -26,6 +29,12 @@ public class HomePage extends PageObject {
     }
 
     public void clickFormsLink(){
+        scrollToPageBottom();
         clickOn(formsLink);
+    }
+
+    public void clickAlertsFrameWindowsLink(){
+        scrollToPageBottom();
+        clickOn(alertsFrameWindowsLink);
     }
 }
