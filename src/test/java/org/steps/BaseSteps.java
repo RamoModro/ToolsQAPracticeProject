@@ -17,6 +17,11 @@ public class BaseSteps extends ScenarioSteps {
     public ButtonsPage buttonsPage;
     public FormsPage formsPage;
     public AlertsFrameWindowsPage alertsFrameWindowsPage;
+    public WidgetsPage widgetsPage;
+    public SliderPage sliderPage;
+    public ProgressBarPage progressBarPage;
+    public ToolTipsPage toolTipsPage;
+    public MenuPage menuPage;
 
     @Step
     public void navigateToHomePage(){

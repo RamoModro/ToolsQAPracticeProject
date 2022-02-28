@@ -43,4 +43,14 @@ public class BaseTest {
     protected FormsSteps formSteps;
     @Steps
     protected AlertsFrameWindowsSteps alertsFrameWindowsSteps;
+    @Steps
+    protected WidgetsSteps widgetsSteps;
+    @Steps
+    protected SliderSteps sliderSteps;
+    @Steps
+    protected ProgressBarSteps progressBarSteps;
+    @Steps
+    protected ToolTipsSteps toolTipsSteps;
+    @Steps
+    protected MenuSteps menuSteps;
 }

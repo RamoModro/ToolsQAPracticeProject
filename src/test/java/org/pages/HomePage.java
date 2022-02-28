@@ -3,7 +3,6 @@ package org.pages;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.DefaultUrl;
-import net.thucydides.core.pages.PageObject;
 
 @DefaultUrl("https://demoqa.com/")
 public class HomePage extends BasePage {
@@ -19,6 +18,9 @@ public class HomePage extends BasePage {
 
     @FindBy(css = ".top-card:nth-child(3)")
     private WebElementFacade alertsFrameWindowsLink;
+
+    @FindBy(css = ".top-card:nth-child(4)")
+    private WebElementFacade widgetsButton;
 
     public void clickElementsLink(){
         clickOn(elementsLink);
@@ -36,5 +38,9 @@ public class HomePage extends BasePage {
     public void clickAlertsFrameWindowsLink(){
         scrollToPageBottom();
         clickOn(alertsFrameWindowsLink);
+    }
+
+    public void clickWidgetsLink(){
+        clickOn(widgetsButton);
     }
 }
