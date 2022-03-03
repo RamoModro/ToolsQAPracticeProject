@@ -53,4 +53,12 @@ public class BaseTest {
     protected ToolTipsSteps toolTipsSteps;
     @Steps
     protected MenuSteps menuSteps;
+    @Steps
+    protected SelectMenuSteps selectMenuSteps;
+    @Steps
+    protected AutoCompleteSteps autoCompleteSteps;
+    @Steps
+    protected InteractionsSteps interactionsSteps;
+    @Steps
+    protected BookStoreAppSteps bookStoreAppSteps;
 }

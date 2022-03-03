@@ -22,6 +22,12 @@ public class HomePage extends BasePage {
     @FindBy(css = ".top-card:nth-child(4)")
     private WebElementFacade widgetsButton;
 
+    @FindBy(css = ".top-card:nth-child(5)")
+    private WebElementFacade interactionsLink;
+
+    @FindBy(css = ".top-card:nth-child(6)")
+    private WebElementFacade bookStoreAppLink;
+
     public void clickElementsLink(){
         clickOn(elementsLink);
     }
@@ -42,5 +48,13 @@ public class HomePage extends BasePage {
 
     public void clickWidgetsLink(){
         clickOn(widgetsButton);
+    }
+
+    public void clickInteractionsLink(){
+        clickOn(interactionsLink);
+    }
+
+    public void clickBookStoreAppLink(){
+        clickOn(bookStoreAppLink);
     }
 }

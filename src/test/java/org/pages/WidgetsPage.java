@@ -8,6 +8,9 @@ public class WidgetsPage extends BasePage{
     @FindBy(className = "main-header")
     private WebElementFacade pageTitle;
 
+    @FindBy(css = ".element-list.collapse.show #item-1")
+    private WebElementFacade autoCompletePageButton;
+
     @FindBy(css = ".element-list.collapse.show #item-3")
     private WebElementFacade sliderPageButton;
 
@@ -19,6 +22,9 @@ public class WidgetsPage extends BasePage{
 
     @FindBy(css = ".element-list.collapse.show #item-7")
     private WebElementFacade menuPageButton;
+
+    @FindBy(css = ".element-list.collapse.show #item-8")
+    private WebElementFacade selectMenuPageButton;
 
     public boolean isUserInWidgetsPage(){
         return pageTitle.containsText("Widgets");
@@ -42,5 +48,15 @@ public class WidgetsPage extends BasePage{
     public void goToMenuPage(){
         scrollToPageBottom();
         clickOn(menuPageButton);
+    }
+
+    public void goToSelectMenuPage(){
+        scrollToPageBottom();
+        clickOn(selectMenuPageButton);
+    }
+
+    public void goToAutoCompletePage(){
+        scrollToPageBottom();
+        clickOn(autoCompletePageButton);
     }
 }

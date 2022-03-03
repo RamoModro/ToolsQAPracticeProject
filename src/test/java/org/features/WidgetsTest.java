@@ -50,4 +50,22 @@ public class WidgetsTest extends BaseTest{
         menuSteps.goToMenuPage();
         menuSteps.goToSubSubItem2ElementInMenu();
     }
+
+    @Test
+    public void checkAllSelectionsType(){
+        widgetsSteps.goToWidgetsPage();
+        selectMenuSteps.goToSelectMenuPage();
+        selectMenuSteps.selectFirstDropDownValue("A root option");
+        selectMenuSteps.setTitleFromDropDown("Mrs.");
+        selectMenuSteps.setOldStyleSelectDropDown("Magenta");
+        selectMenuSteps.setMultiselectDropdownColor();
+        selectMenuSteps.setStandardMultiSelect("Volvo", "Opel");
+    }
+
+    @Test
+    public void checkAutoComplete(){
+        widgetsSteps.goToWidgetsPage();
+        autoCompleteSteps.goToAutoCompletePage();
+        autoCompleteSteps.setMultipleColorField();
+    }
 }

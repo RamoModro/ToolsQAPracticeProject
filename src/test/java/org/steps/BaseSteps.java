@@ -22,6 +22,12 @@ public class BaseSteps extends ScenarioSteps {
     public ProgressBarPage progressBarPage;
     public ToolTipsPage toolTipsPage;
     public MenuPage menuPage;
+    public SelectMenuPage selectMenuPage;
+    public AutoCompletePage autoCompletePage;
+    public InteractionsPage interactionsPage;
+    public SortablePage sortablePage;
+    public BookStoreAppPage bookStoreAppPage;
+    public RegisterPage registerPage;
 
     @Step
     public void navigateToHomePage(){

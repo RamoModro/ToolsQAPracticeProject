@@ -18,7 +18,10 @@ public class SliderPage extends BasePage{
     private WebElementFacade sliderOutput;
 
     @FindBy(css = ".range-slider__tooltip__label")
-    private WebElementFacade rangeSliderButton;
+    private WebElementFacade rangeSliderTooltipText;
+
+    @FindBy(css = ".range-slider")
+    private WebElementFacade rangeSliderTooltipButton;
 
     public void isUserInSliderPage(){
         pageTitle.shouldContainOnlyText("Slider");
@@ -47,7 +50,7 @@ public class SliderPage extends BasePage{
     }
 
     public void getSliderRange(){
-        withAction().moveToElement(rangeSliderButton).build().perform();
+        withAction().moveToElement(rangeSliderTooltipButton).click().build().perform();
         System.out.println(element(By.cssSelector(".range-slider__tooltip__label")).getText());
     }
 
