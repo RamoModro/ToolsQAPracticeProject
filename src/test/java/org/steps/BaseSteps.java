@@ -28,6 +28,7 @@ public class BaseSteps extends ScenarioSteps {
     public SortablePage sortablePage;
     public BookStoreAppPage bookStoreAppPage;
     public RegisterPage registerPage;
+    public ProfilePage profilePage;
 
     @Step
     public void navigateToHomePage(){

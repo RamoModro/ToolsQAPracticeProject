@@ -39,4 +39,15 @@ public class BookStoreAppSteps extends BaseSteps{
     public void clickRegisterButton(){
         registerPage.clickRegister();
     }
+
+    @Step
+    public void loginWithValidCredentials(String username, String pass){
+        bookStoreAppPage.enterLoginCredentials(username, pass);
+        bookStoreAppPage.clickLoginButton();
+    }
+
+    @Step
+    public void checkUserIsInProfilePage(){
+        Assert.assertTrue("User is not redirected to Profile page", profilePage.isUserInProfilePage());
+    }
 }

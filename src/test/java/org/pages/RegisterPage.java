@@ -50,5 +50,6 @@ public class RegisterPage extends BasePage{
 
     public void clickRegister(){
         clickOn(registerButton);
+        getAlert().accept();
     }
 }

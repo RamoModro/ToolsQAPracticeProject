@@ -8,6 +8,12 @@ public class BookStoreAppPage extends BasePage{
     @FindBy(className = "main-header")
     private WebElementFacade pageTitle;
 
+    @FindBy(css = "#userName")
+    private WebElementFacade userNameField;
+
+    @FindBy(css = "#password")
+    private WebElementFacade passwordField;
+
     @FindBy(css = ".element-list.collapse.show #item-0")
     private WebElementFacade loginElement;
 
@@ -30,5 +36,14 @@ public class BookStoreAppPage extends BasePage{
     public boolean clickNewUserButton(){
         clickOn(newUserButton);
         return pageTitle.containsText("Register");
+    }
+
+    public void enterLoginCredentials(String username, String pass){
+        typeInto(userNameField, username);
+        typeInto(passwordField, pass);
+    }
+
+    public void clickLoginButton(){
+        clickOn(loginButton);
     }
 }

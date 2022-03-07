@@ -11,6 +11,14 @@ public class BookStoreAppTest extends BaseTest{
         bookStoreAppSteps.goToUserRegistration();
         bookStoreAppSteps.insertCredentialsInRegistrationForm("User", "Name", "UserName", "Parolaexpirata123#");
         bookStoreAppSteps.thickRecaptchaCheckBox();
-       // bookStoreAppSteps.clickRegisterButton();
+        //bookStoreAppSteps.clickRegisterButton();
+    }
+
+    @Test
+    public void loginWithValidCredentialsTest(){
+        bookStoreAppSteps.goToBookStoreApp();
+        bookStoreAppSteps.goToUserLogin();
+        bookStoreAppSteps.loginWithValidCredentials("UserName", "Parolaexpirata123#");
+        bookStoreAppSteps.checkUserIsInProfilePage();
     }
 }
